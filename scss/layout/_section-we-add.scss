@@ -1,0 +1,67 @@
+@use "../abstracts" as *;
+@use "../util" as u;
+
+.section-we-add {
+  background-color: $clr-light-gray;
+  &__container {
+    padding-inline: u.toRem(30);
+    padding-block: u.toRem(55);
+    max-width: u.toRem(1440);
+    margin-inline: auto;
+    @include media-query-up(medium) {
+      padding-inline: u.toRem(100);
+      padding-block: u.toRem(130);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__gallery {
+    width: 100%;
+    max-width: u.toRem(570);
+    margin-inline: auto;
+    position: relative;
+    @include media-query-up(medium) {
+      margin-inline: 0;
+      margin-top: u.toRem(-40);
+    }
+  }
+  &__img {
+    width: 80%;
+    border-radius: u.toRem(8);
+    & + & {
+      position: absolute;
+      top: u.toRem(40);
+      left: 20%;
+    }
+  }
+
+  &__content {
+    margin-top: u.toRem(95);
+    max-width: u.toRem(580);
+    margin-inline: auto;
+    @include media-query-up(medium) {
+      margin-inline: 0;
+      margin-top: 0;
+    }
+    & > .btn {
+      margin-top: u.toRem(27.5);
+    }
+  }
+
+  &__text {
+    margin-top: u.toRem(27.5);
+  }
+  &__list {
+    margin-top: u.toRem(14);
+    margin-left: u.toRem(14);
+    list-style-type: circle;
+  }
+  &__list-item {
+    & + & {
+      margin-top: u.toRem(10);
+    }
+  }
+}

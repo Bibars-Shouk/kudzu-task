@@ -1,0 +1,55 @@
+@use "../abstracts" as *;
+@use "../util" as u;
+
+.line {
+  content: "";
+  height: 2px;
+  width: 80%;
+  transform: rotate(-3deg);
+
+  &--blue {
+    background-color: $clr-light-blue;
+  }
+
+  &--pink {
+    background-color: $clr-dark-pink;
+  }
+
+  &--hero,
+  &--kv,
+  &--services,
+  &--wa {
+    margin-top: u.toRem(24);
+  }
+
+  &--footer,
+  &--clients,
+  &--cwww,
+  &--grow,
+  &--ow {
+    margin-top: u.toRem(11);
+  }
+
+  &--cwww,
+  &--kv,
+  &--services {
+    margin-inline: auto;
+  }
+
+  &--cwww {
+    width: 90%;
+    max-width: u.toRem(460);
+  }
+
+  &--ow {
+    max-width: u.toRem(260);
+  }
+
+  &--services {
+    width: u.toRem(300);
+  }
+  &--kv {
+    width: 75%;
+    max-width: u.toRem(300);
+  }
+}

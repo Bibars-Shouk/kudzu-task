@@ -1,0 +1,12 @@
+$breakpoints: (
+  "small": 26.5625rem,
+  "medium": 48.0625em,
+  "forSection_FeedBack": 41.25em,
+  "large": 64.0625em,
+);
+
+@mixin media-query-up($size) {
+  @media (min-width: map-get($breakpoints,$size)) {
+    @content;
+  }
+}

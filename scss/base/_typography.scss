@@ -1,0 +1,127 @@
+@use "../abstracts" as *;
+@use "../util" as u;
+
+.section-process {
+  &__term {
+    font-size: u.toRem(28);
+    font-weight: 300;
+    color: $clr-mid-blue;
+  }
+}
+
+.section-services {
+  &__service-header {
+    font-size: u.toRem(22);
+    color: $clr-dark-blue;
+  }
+
+  &__text {
+    font-size: u.toRem(13);
+    color: $clr-dark-blue;
+    &--small {
+      font-size: u.toRem(12);
+      color: $clr-dark-gray;
+    }
+  }
+}
+
+.section-key-values {
+  &__key-header {
+    font-size: u.toRem(20);
+    color: $clr-dark-blue;
+  }
+}
+
+.footer {
+  &__contact-text {
+    font-size: u.toRem(16);
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &__label {
+    color: #fff;
+    font-size: u.toRem(18);
+  }
+
+  &__mini-header {
+    color: #fff;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &__container--bottom-section {
+    font-size: u.toRem(12);
+  }
+
+  &__terms-container {
+    color: #fff;
+  }
+  &__bottom-link {
+    color: #fff;
+  }
+
+  &__cr-text {
+    color: #fff;
+  }
+}
+
+.section-header {
+  line-height: 1.4;
+  font-size: clamp(u.toRem(28), 4vw + u.toRem(10), u.toRem(48));
+  color: $clr-dark-blue;
+  font-style: italic;
+  line-height: 1.4;
+
+  // hero
+  &--hero {
+    color: #fff;
+    font-size: clamp(u.toRem(32), 4vw + u.toRem(12.5), u.toRem(54));
+    font-style: normal;
+    &--blue {
+      color: $clr-light-blue;
+      display: block;
+    }
+  }
+
+  // footer
+  &--footer {
+    color: #fff;
+  }
+}
+
+.section-text {
+  color: $clr-dark-gray;
+  font-size: u.toRem(16);
+  line-height: 1.7;
+
+  //hero
+  &--white {
+    color: #fff;
+  }
+
+  // we add
+  &--wa {
+    line-height: normal;
+  }
+
+  // feedback
+  &--fb {
+    font-size: u.toRem(14);
+  }
+  &--fb--blue {
+    font-size: u.toRem(15);
+    color: $clr-light-blue;
+  }
+  &--fb--title {
+    font-size: u.toRem(15);
+  }
+
+  // companies www
+  &--cwww {
+    font-size: u.toRem(18);
+  }
+}

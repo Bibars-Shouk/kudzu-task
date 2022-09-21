@@ -1,0 +1,24 @@
+@use "../abstracts" as *;
+@use "../util" as u;
+
+.hero__scroll-btn {
+  height: u.toRem(56);
+  width: u.toRem(56);
+  border-radius: u.toRem(100);
+  border: none;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(47, 171, 228, 0.894) 1px 1px 30px -5px,
+    rgba(47, 171, 228, 0.894) -1px -1px 30px -5px;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  @include media-query-up(medium) {
+    &:hover {
+      transform: translateY(u.toRem(10)) scale(0.96);
+      box-shadow: rgba(47, 171, 228, 0.894) 1px 1px 25px -5px,
+        rgba(47, 171, 228, 0.894) -1px -1px 25px -5px;
+    }
+  }
+}

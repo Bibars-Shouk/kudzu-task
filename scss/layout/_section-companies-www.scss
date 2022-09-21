@@ -1,0 +1,97 @@
+@use "../abstracts" as *;
+@use "../util" as u;
+
+.section-companies-www {
+  position: relative;
+  background-color: $clr-light-gray;
+  min-height: u.toRem(600);
+  &__svg-container {
+    position: absolute;
+    top: 50%;
+    right: u.toRem(-267.94);
+    transform: translateY(-50%);
+    opacity: 40%;
+  }
+  &__container {
+    padding-inline: u.toRem(30);
+    padding-block: u.toRem(55);
+    max-width: u.toRem(1440);
+    margin-inline: auto;
+    @include media-query-up(medium) {
+      padding-inline: u.toRem(100);
+    }
+  }
+
+  &__img {
+    display: none;
+    @include media-query-up(medium) {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__header {
+    max-width: u.toRem(600);
+    margin-inline: auto;
+
+    @include media-query-up(small) {
+      text-align: center;
+    }
+  }
+
+  &__cards-container {
+    margin-top: u.toRem(50);
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  &__card {
+    margin: u.toRem(20) u.toRem(10);
+    text-align: center;
+    max-width: u.toRem(260);
+  }
+  &__logo {
+    margin-inline: auto;
+  }
+  &__text {
+    margin-top: u.toRem(54);
+  }
+  &__name {
+    margin-top: u.toRem(14);
+  }
+}
+
+#wheel-lvl {
+  &--1,
+  &--2 {
+    transform-origin: 50% 50%;
+    animation: wheel-cw-animation 10s linear infinite;
+  }
+  &--3 {
+    transform-origin: 50% 50%;
+    animation: wheel-ucw-animation 10s linear infinite;
+  }
+}
+
+@keyframes wheel-cw-animation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wheel-ucw-animation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}

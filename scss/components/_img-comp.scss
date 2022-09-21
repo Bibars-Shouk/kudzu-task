@@ -1,0 +1,70 @@
+@use "../util" as u;
+@use "../abstracts" as *;
+
+.donut {
+  position: absolute;
+  z-index: -1;
+
+  height: u.toRem(280);
+  width: u.toRem(280);
+
+  @include media-query-up(medium) {
+    height: u.toRem(450);
+    width: u.toRem(450);
+  }
+
+  &--grow {
+    top: u.toRem(-140);
+    right: u.toRem(-140);
+    @include media-query-up(medium) {
+      right: u.toRem(-190);
+      top: unset;
+      bottom: -50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &--ow {
+    bottom: u.toRem(-140);
+    right: u.toRem(-140);
+    @include media-query-up(medium) {
+      right: u.toRem(-190);
+      top: unset;
+      bottom: -50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.circles {
+  position: absolute;
+  z-index: -1;
+
+  height: u.toRem(610);
+  width: u.toRem(610);
+
+  @include media-query-up(medium) {
+    height: u.toRem(710);
+    width: u.toRem(710);
+  }
+
+  &--grow {
+    bottom: u.toRem(-305);
+    left: u.toRem(-152.5);
+    @include media-query-up(medium) {
+      bottom: unset;
+      top: u.toRem(-305);
+      left: u.toRem(-200);
+    }
+  }
+
+  &--ow {
+    top: u.toRem(-305);
+    left: u.toRem(-152.5);
+    @include media-query-up(medium) {
+      bottom: unset;
+      top: u.toRem(-305);
+      left: u.toRem(-200);
+    }
+  }
+}

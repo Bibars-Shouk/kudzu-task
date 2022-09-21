@@ -1,0 +1,17 @@
+#doc,
+#window,
+#code {
+  animation: hero-animation 3s ease-in-out infinite;
+}
+
+@keyframes hero-animation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

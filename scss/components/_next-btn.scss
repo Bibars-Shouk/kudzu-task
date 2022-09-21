@@ -1,0 +1,18 @@
+@use "../abstracts" as *;
+@use "../util" as u;
+
+.next-btn {
+  height: u.toRem(40);
+  width: u.toRem(40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: u.toRem(100);
+  border: none;
+  border: 1px solid $clr-light-blue;
+  background-color: #fff;
+  cursor: pointer;
+  &__img {
+    height: 35%;
+  }
+}

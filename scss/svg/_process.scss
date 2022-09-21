@@ -1,0 +1,293 @@
+@use "../abstracts" as *;
+
+#step-circle--1 {
+  fill: $clr-light-blue;
+}
+
+#step-number--1 {
+  fill: #fff;
+}
+
+#coffee-steam {
+  transform: translateY(25px);
+  animation: coffee-steam-animation 3s ease infinite;
+}
+
+#all-shapes {
+  animation: all-shapes-animation 3s ease-in-out infinite;
+}
+
+#gear {
+  &-s {
+    animation: gear-animation 3s linear infinite;
+    transform-box: fill-box;
+    transform-origin: center center;
+  }
+  &-m {
+    animation: gear-animation 3s linear infinite;
+    transform-box: fill-box;
+    transform-origin: center center;
+  }
+  &-l {
+    animation: gear-animation 3s linear infinite;
+    transform-box: fill-box;
+    transform-origin: center center;
+  }
+}
+
+#hand {
+  transform-origin: 50% 50%;
+
+  &.jump-to-step-1 {
+    animation: jump-to-step-1 1s ease-in-out;
+  }
+  &.jump-to-step-2 {
+    animation: jump-to-step-2 1s ease-in-out;
+  }
+  &.jump-to-step-3 {
+    animation: jump-to-step-3 1s ease-in-out;
+  }
+  &.jump-to-step-4 {
+    animation: jump-to-step-4 1s ease-in-out;
+  }
+  &.jump-to-step-5 {
+    animation: jump-to-step-5 1s ease-in-out;
+  }
+  &.jump-to-step-6 {
+    animation: jump-to-step-6 1s ease-in-out;
+  }
+}
+
+#hand-circle {
+  &.animate {
+    animation: hand-circle-animation 1s linear;
+  }
+}
+
+#step-circle {
+  &--1,
+  &--2,
+  &--3,
+  &--4,
+  &--5,
+  &--6 {
+    transition: fill 1s ease-in;
+  }
+
+  &--1 {
+    fill: #fff;
+    &.active {
+      fill: $clr-light-blue;
+    }
+  }
+  &--2 {
+    &.active {
+      fill: $clr-light-blue;
+    }
+  }
+  &--3 {
+    &.active {
+      fill: $clr-light-blue;
+    }
+  }
+  &--4 {
+    &.active {
+      fill: $clr-light-blue;
+    }
+  }
+  &--5 {
+    &.active {
+      fill: $clr-light-blue;
+    }
+  }
+  &--6 {
+    &.active {
+      fill: $clr-light-blue;
+    }
+  }
+}
+
+#step-number {
+  &--1,
+  &--2,
+  &--3,
+  &--4,
+  &--5,
+  &--6 {
+    transition: fill 1s ease;
+  }
+
+  &--1 {
+    fill: $clr-light-blue;
+    &.active {
+      fill: #fff;
+    }
+  }
+  &--2 {
+    &.active {
+      fill: #fff;
+    }
+  }
+  &--3 {
+    &.active {
+      fill: #fff;
+    }
+  }
+  &--4 {
+    &.active {
+      fill: #fff;
+    }
+  }
+  &--5 {
+    &.active {
+      fill: #fff;
+    }
+  }
+  &--6 {
+    &.active {
+      fill: #fff;
+    }
+  }
+}
+
+#step-tag {
+  &-emphasise,
+  &-define,
+  &-ideate,
+  &-prototype,
+  &-test,
+  &-build {
+    transition: fill 1s ease;
+  }
+
+  &-emphasise {
+    fill: #afb3b8;
+    &.active {
+      fill: $clr-light-blue;
+    }
+  }
+  &-define {
+    &.active {
+      fill: $clr-light-blue;
+    }
+  }
+  &-ideate {
+    &.active {
+      fill: $clr-light-blue;
+    }
+  }
+  &-prototype {
+    &.active {
+      fill: $clr-light-blue;
+    }
+  }
+  &-test {
+    &.active {
+      fill: $clr-light-blue;
+    }
+  }
+  &-build {
+    &.active {
+      fill: $clr-light-blue;
+    }
+  }
+}
+
+@keyframes coffee-steam-animation {
+  from {
+    transform: translateY(25px);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes all-shapes-animation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes gear-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+// Hand animation
+@keyframes jump-to-step-1 {
+  from {
+    transform: rotate(-300deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes jump-to-step-2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-60deg);
+  }
+}
+
+@keyframes jump-to-step-3 {
+  from {
+    transform: rotate(-60deg);
+  }
+  to {
+    transform: rotate(-120deg);
+  }
+}
+
+@keyframes jump-to-step-4 {
+  from {
+    transform: rotate(-120deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes jump-to-step-5 {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(-240deg);
+  }
+}
+
+@keyframes jump-to-step-6 {
+  from {
+    transform: rotate(-240deg);
+  }
+  to {
+    transform: rotate(-300deg);
+  }
+}
+
+@keyframes hand-circle-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

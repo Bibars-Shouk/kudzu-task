@@ -1,0 +1,13 @@
+#wheel {
+  animation: wheel-animation 8s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes wheel-animation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
